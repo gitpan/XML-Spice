@@ -1,0 +1,15 @@
+Build.PL
+Changes
+lib/XML/Spice.pm
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.yml
+README
+t/00-load.t
+t/05-import.t
+t/10-coderef.t
+t/10-generation.t
+t/10-misc.t
+t/10-namespaces.t
+t/10-tags.t
+Makefile.PL
