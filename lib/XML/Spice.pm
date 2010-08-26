@@ -7,7 +7,7 @@ use strict;
 
 use Carp;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub import {
     my ($pkg, @args) = @_;
@@ -84,6 +84,8 @@ sub _xml {
         $val =~ s/&/&amp;/g;
         $val =~ s/</&lt;/g;
         $val =~ s/>/&gt;/g;
+        $val =~ s/"/&quot;/g;
+        $val =~ s/([^\x20-\x7E])/'&#' . ord($1) . ';'/ge;
         return $val;
     }
 
@@ -426,7 +428,7 @@ E<lt>rob@cataclysm.cxE<gt>.
 
 =head1 AUTHOR
 
-Copyright 2006-2009 Robert Norris E<lt>rob@cataclysm.cxE<gt>.
+Copyright 2006-2010 Robert Norris E<lt>rob@eatenbyagrue.org<gt>.
 
 =head1 LICENSE
 

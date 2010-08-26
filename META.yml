@@ -1,24 +1,24 @@
 ---
-name: XML-Spice
-version: 0.01
+abstract: 'generating XML has never been so Perly!'
 author:
   - 'Robert Norris <rob@cataclysm.cx>'
-abstract: generating XML has never been so Perly!
-license: perl
-resources:
-  license: http://dev.perl.org/licenses/
 build_requires:
   Test::More: 0
   Test::XML: 0
-requires:
-  Carp: 0
 configure_requires:
-  Module::Build: 0.35
-provides:
-  XML::Spice:
-    file: lib/XML/Spice.pm
-    version: 0.01
-generated_by: Module::Build version 0.35
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
+name: XML-Spice
+provides:
+  XML::Spice:
+    file: lib/XML/Spice.pm
+    version: 0.02
+requires:
+  Carp: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.02
