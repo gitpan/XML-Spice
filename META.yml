@@ -1,24 +1,22 @@
 ---
 abstract: 'generating XML has never been so Perly!'
 author:
-  - 'Robert Norris <rob@cataclysm.cx>'
+  - 'Robert Norris <rob@eatenbyagrue.org>'
 build_requires:
   Test::More: 0
   Test::XML: 0
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3603'
-license: perl
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132140'
+license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: XML-Spice
-provides:
-  XML::Spice:
-    file: lib/XML/Spice.pm
-    version: 0.02
 requires:
   Carp: 0
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.02
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=XML-Spice
+  repository: git://github.com/robn/XML-Spice.git
+version: 0.03

@@ -1,4 +1,7 @@
 package XML::Spice;
+{
+  $XML::Spice::VERSION = '0.03';
+}
 
 require 5.008;
 
@@ -6,8 +9,6 @@ use warnings;
 use strict;
 
 use Carp;
-
-our $VERSION = "0.02";
 
 sub import {
     my ($pkg, @args) = @_;
@@ -38,7 +39,7 @@ sub x {
         tag   => $tag,
         attrs => {},
     };
-    
+
     for my $arg (@args) {
         if (ref $arg eq "HASH") {
             for my $key (keys %$arg) {
@@ -138,8 +139,8 @@ sub _xml {
     for my $attr (keys %{$chunk->{attrs}}) {
         $xml .= " $attr='" . _escape_attr($chunk->{attrs}->{$attr}) . "'";
     }
-    
-    if (!$subxml) {
+
+    if (!defined $subxml) {
         $xml .= "/>";
         $chunk->{cached} = $xml;
         return $xml;
@@ -166,6 +167,10 @@ __END__
 =head1 NAME
 
 XML::Spice - generating XML has never been so Perly!
+
+=head1 VERSION
+
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -424,11 +429,11 @@ If you find this module useful, please consider rating it on the CPAN Ratings
 service at L<http://cpanratings.perl.org/rate?distribution=XML-Spice>.
 
 If you like (or hate) this module, please tell the author! Send mail to
-E<lt>rob@cataclysm.cxE<gt>.
+E<lt>rob@eatenbyagrue.org<gt>.
 
 =head1 AUTHOR
 
-Copyright 2006-2010 Robert Norris E<lt>rob@eatenbyagrue.org<gt>.
+Copyright 2006-2013 Robert Norris E<lt>rob@eatenbyagrue.orgE<gt>.
 
 =head1 LICENSE
 
