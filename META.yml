@@ -3,20 +3,25 @@ abstract: 'generating XML has never been so Perly!'
 author:
   - 'Robert Norris <rob@eatenbyagrue.org>'
 build_requires:
-  Test::More: 0
-  Test::XML: 0
+  Test::More: '0'
+  Test::XML: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132140'
+generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: XML-Spice
+optional_features:
+  PrettyPrinting:
+    description: 'Pretty printing'
+    requires:
+      XML::Tidy::Tiny: '0'
 requires:
-  Carp: 0
+  Carp: '0'
 resources:
-  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=XML-Spice
+  bugtracker: https://github.com/robn/XML-Spice/issues
   repository: git://github.com/robn/XML-Spice.git
-version: 0.03
+version: '0.04'

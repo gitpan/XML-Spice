@@ -4,7 +4,7 @@
       "Robert Norris <rob@eatenbyagrue.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132140",
+   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "artistic_2"
    ],
@@ -13,10 +13,27 @@
       "version" : "2"
    },
    "name" : "XML-Spice",
+   "optional_features" : {
+      "PrettyPrinting" : {
+         "description" : "Pretty printing",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "XML::Tidy::Tiny" : "0"
+               }
+            }
+         }
+      }
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "XML::Tidy::Tiny" : "0"
          }
       },
       "runtime" : {
@@ -35,7 +52,7 @@
    "resources" : {
       "bugtracker" : {
          "mailto" : "bug-xml-spice@rt.cpan.org",
-         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=XML-Spice"
+         "web" : "https://github.com/robn/XML-Spice/issues"
       },
       "repository" : {
          "type" : "git",
@@ -43,6 +60,6 @@
          "web" : "http://github.com/robn/XML-Spice"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 
